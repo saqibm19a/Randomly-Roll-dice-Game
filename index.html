@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Dice Roller</title>
+    <style>
+        #diceImage {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <img id="diceImage" src="" alt="Dice Image"> <br> <br>
+    <button onclick="rollDice()" >Roll Dice</button>
+    
+    <script>
+        function rollDice() {
+            let diceImages = [
+                'dice (1).jpg',
+                'dice (2).jpg',
+                'dice (3).jpg',
+                'dice (4).jpg',
+                'dice (5).jpg',
+                'dice (6).jpg'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * diceImages.length);
+            var randomDiceImage = diceImages[randomIndex];
+
+            document.getElementById('diceImage').src = randomDiceImage;
+        }
+    </script>
+</body>
+</html>
